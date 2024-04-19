@@ -1,0 +1,288 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body style */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Container style */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header style */
+.site-header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.site-header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Hiệu ứng phát sáng */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.site-header h2 {
+  font-size: 1.2em;
+}
+
+/* Profile section style */
+.profile-section {
+  text-align: center;
+  margin: 30px 0;
+  animation: scaleIn 1s ease-in-out;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid #007bff;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+  transition: transform 0.3s ease; /* Hiệu ứng khi di chuột qua ảnh */
+}
+
+.profile-img:hover {
+  transform: scale(1.05); /* Phóng to hình ảnh khi di chuột qua */
+}
+
+/* Section style */
+section {
+  margin-bottom: 30px;
+}
+
+section h4 {
+  font-size: 1.2em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 10px;
+  color: #555; /* Màu chữ nhạt hơn */
+}
+
+/* Footer style */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.designer-credit {
+  font-size: 22px;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff; /* Màu chữ ban đầu */
+  animation: floatUp 5s infinite alternate;
+}
+
+.designer-name {
+  color: inherit; /* Kế thừa màu từ cha */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Chữ phát sáng */
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Đặc biệt: in đậm và in hoa cho "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" */
+.country-name {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em; /* Điều chỉnh kích thước font chữ */
+}
+
+/* Đặc biệt: in đậm và gạch chân cho "Độc lập - Tự do - Hạnh phúc" */
+.motto {
+  font-weight: bold;
+  text-decoration: underline;
+  /* Hiệu ứng phát sáng */
+  text-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  font-size: 0.8em; /* Điều chỉnh kích thước font chữ */
+}
+
+/* Hiệu ứng Hover cho Liên kết */
+a:hover {
+  color: #004085; /* Màu chữ thay đổi khi di chuột qua */
+}
+
+/* Hiệu ứng Hover cho Ảnh */
+.profile-img:hover {
+  transform: scale(1.1); /* Phóng to hình ảnh khi di chuột qua */
+}
+
+/* Hiệu ứng Transition cho Phần Tựa Đề */
+.section-title {
+  transition: color 0.3s ease; /* Hiệu ứng màu sắc khi thay đổi */
+}
+
+/* Hiệu ứng Shadow cho Phần Nội dung */
+.section-content {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow mềm mại */
+}
+
+/* Hiệu ứng Fade-in cho Phần Nội dung */
+.section-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.section-content.loaded {
+  opacity: 1;
+}
+
+/* Hiệu ứng Parallax cho Hình Ảnh Nền */
+.background-image {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Fade-in effects */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Button style */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  margin: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button a:hover {
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Icon style */
+button i {
+  margin-right: 5px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #333; /* Màu nền đen */
+  color: #fff; /* Màu chữ trắng */
+}
+
+.dark-mode .site-header {
+  background-color: #333; /* Màu nền header đen */
+}
+
+.dark-mode .site-header h1,
+.dark-mode .site-header h2 {
+  text-shadow: none; /* Loại bỏ hiệu ứng phát sáng */
+}
+
+.dark-mode section h4 {
+  color: #fff; /* Màu chữ trắng cho tiêu đề section */
+}
+
+.dark-mode section p {
+  color: #ddd; /* Màu chữ xám nhạt */
+}
+
+.dark-mode footer {
+  background-color: #333; /* Màu nền footer đen */
+}
+
+.dark-mode a {
+  color: #b3b3b3; /* Màu chữ xám cho liên kết */
+}
+
+.dark-mode .profile-img {
+  border-color: #fff; /* Viền ảnh trắng */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Shadow trắng */
+}
+
+.dark-mode button {
+  background-color: #333; /* Màu nền nút đen */
+  color: #fff; /* Màu chữ trắng */
+}
+
+.dark-mode button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dark-mode button:hover {
+  background-color: #666; /* Màu nền nút hover đen nhạt */
+}
+
+.dark-mode .designer-credit {
+  color: #ffffff; /* Màu chữ xám nhạt cho credit */
+}
+
+.dark-mode .designer-name {
+  color: inherit; /* Kế thừa màu từ cha */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Chữ phát sáng */
+}
